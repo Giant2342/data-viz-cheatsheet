@@ -1,0 +1,155 @@
+# === List of Graph Types and Their Ideal Use Cases ===
+
+# 1. Histogram
+# Use when: 
+# - You want to visualize the distribution of a single numerical variable.
+# - You need to understand how data is spread and identify skewness, modality, or outliers.
+# Example: 
+# - Distribution of exam scores, income distribution, or age distribution.
+
+# 2. Boxplot
+# Use when:
+# - You need to visualize the spread, central tendency, and outliers of a numerical variable.
+# - Ideal for comparing multiple groups or variables.
+# Example:
+# - Comparing salaries across different job roles or the range of BGL values in different age groups.
+
+# 3. Countplot
+# Use when:
+# - You want to show the frequency distribution of a categorical variable.
+# - Ideal for comparing the size of categories.
+# Example:
+# - Count of people in each age group, or frequency of different juice types consumed.
+
+# 4. Scatterplot
+# Use when:
+# - You need to visualize the relationship between two continuous variables.
+# - Good for detecting correlations, trends, and clustering.
+# Example:
+# - Relationship between height and weight, or age vs BGL levels.
+
+# 5. Correlation Heatmap
+# Use when:
+# - You want to understand correlations between multiple numerical variables.
+# - Great for detecting linear relationships between pairs of variables.
+# Example:
+# - Correlation between age, sugar consumption, exercise, and BGL.
+
+# 6. Pairplot
+# Use when:
+# - You want to visualize pairwise relationships between multiple variables.
+# - Good for examining distributions and relationships for multi-variable analysis.
+# Example:
+# - Visualizing how different factors like age, exercise, and juice consumption interact in relation to BGL.
+
+# 7. Violin Plot
+# Use when:
+# - You need to show the distribution of a numerical variable across different categories.
+# - It combines features of boxplots and density plots, making it useful for comparing distributions.
+# Example:
+# - Distribution of BGL across different levels of exercise routine.
+
+# 8. Line Plot
+# Use when:
+# - You want to show trends over time or a continuous variable.
+# - Ideal for visualizing time series data.
+# Example:
+# - Trends of BGL levels over different age groups or over time.
+
+# 9. Bar Plot
+# Use when:
+# - You want to compare the sizes of different categories (categorical data).
+# - Ideal for categorical comparisons.
+# Example:
+# - Number of admissions per department, or frequency of different categories like juice types.
+
+# 10. Stacked Bar Plot
+# Use when:
+# - You want to compare categories within categories.
+# - Ideal for showing proportions or segmented data.
+# Example:
+# - Admissions by gender and department.
+
+# 11. Heatmap
+# Use when:
+# - You want to visualize complex data in a matrix form.
+# - Ideal for showing relationships or patterns in two-dimensional data.
+# Example:
+# - Displaying user interaction data or the correlation matrix of multiple variables.
+
+# 12. Pie Chart
+# Use when:
+# - You want to show proportions of a whole.
+# - Best for fewer categories, typically 3-6 categories.
+# Example:
+# - Market share, or distribution of juice types consumed in a survey.
+
+# 13. Funnel Plot
+# Use when:
+# - You want to show the progression of a variable through stages.
+# - Typically used in marketing, sales, or other sequential data.
+# Example:
+# - Conversion rates in a marketing campaign.
+
+# 14. Radar Chart (Spider Plot)
+# Use when:
+# - You need to visualize multivariate data on a circular graph.
+# - Ideal for comparing multiple variables at once, especially with categorical data.
+# Example:
+# - Comparing multiple characteristics (e.g., BGL, age, sugar intake, exercise) for different juice types.
+
+# 15. Treemap
+# Use when:
+# - You want to visualize hierarchical data and proportions within subcategories.
+# - Ideal for large data sets with categories and subcategories.
+# Example:
+# - Visualizing market share by company and region.
+
+# 16. Regression Line (with Scatterplot)
+# Use when:
+# - You need to model and visualize the relationship between two numerical variables.
+# - Ideal for understanding linear relationships.
+# Example:
+# - Age vs BGL, or sugar intake vs BGL.
+
+# 17. Residual Plot
+# Use when:
+# - You want to visualize the residuals (errors) from a regression model.
+# - Helps to check model assumptions (e.g., homoscedasticity).
+# Example:
+# - Checking residuals of a linear regression model for predicting BGL from age.
+
+# 18. ANOVA Plot (Analysis of Variance)
+# Use when:
+# - You want to visualize the results of an ANOVA test comparing multiple groups.
+# - Helps understand differences between group means.
+# Example:
+# - Comparing BGL means across different juice types or exercise levels.
+
+# 19. Mosaic Plot
+# Use when:
+# - You need to visualize the relationship between two or more categorical variables.
+# - Good for showing proportions and interactions between categories.
+# Example:
+# - Proportion of age groups across different genders or juice types.
+
+# 20. Swarm Plot
+# Use when:
+# - You want to visualize the distribution of a categorical variable with jittered points.
+# - Ideal for understanding the spread and clustering of categorical data.
+# Example:
+# - Distribution of BGL for different exercise levels.
+
+# === Tips for Data Visualization ===
+# - For small datasets, scatterplots and bar charts are good choices.
+# - For large datasets, histograms, boxplots, and heatmaps help summarize the data.
+# - Use line plots for continuous time series data or trends.
+# - Heatmaps and pairplots are excellent for exploring correlations.
+
+
+Numerical vs Categorical: Use scatterplots for continuous variables, and bar plots for categorical comparisons.
+Time Series: Line plots are the best way to display trends over time.
+Relationships: Correlation heatmaps, scatterplots, and pairplots are excellent for detecting relationships.
+Distribution: Histograms, boxplots, and violin plots help visualize the spread of data.
+Comparing Groups: Use boxplots, bar plots, and ANOVA for comparing groups.
+High-dimensional data: Visualize with pairplots, heatmaps, or radar charts.
