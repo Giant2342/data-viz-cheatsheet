@@ -1,0 +1,57 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import statsmodels.api as sm
+from statsmodels.formula.api import ols
+from scipy.stats import f_oneway
+
+# Load the BGL dataset
+bgl_data = pd.read_csv("BGL.csv")
+
+# (a) Relationship between Age and BGL
+plt.figure(figsize=(8, 6))
+sns.scatterplot(data=bgl_data, x="Age", y="BGL")
+sns.regplot(data=bgl_data, x="Age", y="BGL", scatter=False, color='red', label="Trendline")
+plt.title("Age vs BGL")
+plt.legend()
+plt.show()
+
+# (b) Statistical analysis: Is Age associated with BGL?
+model = ols("BGL ~ Age", data=bgl_data).fit()
+print(model.summary())
+
+# (c) General population vs controlled study
+# Explanation provided above, no code required here.
+
+# (d) Association between Exercise_Routine and BGL
+plt.figure(figsize=(8, 6))
+sns.boxplot(data=bgl_data, x="Exercise_Routine", y="BGL")
+plt.title("BGL by Exercise Routine")
+plt.show()
+
+# One-way ANOVA test
+groups = [bgl_data[bgl_data['Exercise_Routine'] == level]['BGL'] for level in bgl_data['Exercise_Routine'].unique()]
+anova_result = f_oneway(*groups)
+print(f"ANOVA p-value: {anova_result.pvalue}")
+
+
+
+
+
+# Load the Flower dataset
+flower_data = pd.read_csv("flower.csv")
+
+# Scatter plot of petal length vs petal width, colored by species
+plt.figure(figsize=(8, 6))
+sns.scatterplot(data=flower_data, x="Petal_Length", y="Petal_Width", hue="Species", palette="viridis")
+plt.title("Petal Length vs Petal Width by Species")
+plt.legend(title="Species")
+plt.show()
+
+# Statistical analysis: Two-way ANOVA
+flower_model = ols("Petal_Width ~ Petal_Length * Species", data=flower_data).fit()
+anova_table = sm.stats.anova_lm(flower_model, typ=2)
+print(anova_table)
+
+
+
